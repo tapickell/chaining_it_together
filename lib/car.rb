@@ -1,10 +1,14 @@
 class Car
   attr_reader :color, :top_speed, :number_of_seats, :music_format
   def initialize
+    @number_of_seats = 1
+    @color = 'black'
+    @top_speed = 1
+    @music_format = 'eight track cassette'
   end
 
   def passengers
-    @passengers.first(@number_of_seats)
+    @passengers.first(@number_of_seats) || []
   end
 
   def can_play(music_format)
