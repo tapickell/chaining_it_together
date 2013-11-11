@@ -23,7 +23,7 @@ class Car
   end
 
   def with(*passengers)
-    @passengers = passengers
+    @passengers = Array(passengers)
     self
   end
 
